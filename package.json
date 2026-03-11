@@ -1,0 +1,9 @@
+{
+  "name": "chatplace",
+  "version": "1.0.0",
+  "description": "Room-based chat app with password-protected spaces",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
