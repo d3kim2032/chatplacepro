@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatplace</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="card">
+        <h1>Chatplace</h1>
+        <p>Create or join a password-protected space and chat in real time.</p>
+
+        <form id="join-form" class="stack">
+          <label>
+            Your name
+            <input id="userName" name="userName" maxlength="30" required />
+          </label>
+
+          <label>
+            Space name
+            <input id="spaceName" name="spaceName" maxlength="40" required />
+          </label>
+
+          <label>
+            Space password
+            <input id="password" name="password" type="password" maxlength="40" required />
+          </label>
+
+          <button type="submit">Enter space</button>
+        </form>
+
+        <p id="status" class="status" aria-live="polite">Not connected</p>
+      </section>
+
+      <section class="card chat-card">
+        <div class="chat-header">
+          <h2 id="room-title">No space joined</h2>
+          <p id="presence">People here: none</p>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="chat-form" class="chat-input">
+          <input id="chatText" name="chatText" maxlength="500" placeholder="Write a message" required disabled />
+          <button type="submit" disabled>Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
